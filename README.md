@@ -34,3 +34,12 @@
 ```bash
 npm i server-only 
 ```
+
+#### Third -party packages
+
+- Server components have introduced an exciting new paradigm in React
+- Third-party packages are including the 'use client' directive making it clear where they should run
+- Many npm packages have not cut up with this development and they might fail in server components but work in client components
+
+- We can wrap our third party packages in client components
+- npm i react-slick slick-carousel @types/react-slick
