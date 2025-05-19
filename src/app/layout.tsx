@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {createContext} from "react";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -19,21 +19,6 @@ export const metadata: Metadata = {
 };
 
 
-type Theme = {
-  colors: {
-    primary: string;
-    secondary: string;
-  }
-}
-
-const defaultTheme: Theme = {
-  colors: {
-    primary: "#0070f3",
-    secondary: "#6c757d"
-  },
-};
-
-const ThemeContext = createContext<Theme>(defaultTheme);
 
 
 export default function RootLayout({
@@ -43,13 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeContext.Provider value={defaultTheme}>
+      <ThemeProvider>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           {children}
         </body>
-      </ThemeContext.Provider>
+      </ThemeProvider>
     </html>
   );
 }
