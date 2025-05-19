@@ -49,3 +49,14 @@ npm i server-only
 - these typically live near the root of an application to share global state and logic. E.g., theme
 
 - react context is not supported in server components, if you try it in the root you will get an error
+
+## Client-only code
+
+-some functionality should be kept strictly client side. E.g dom manipulation, window object interaction or localStorage operation.
+
+- this should be done to prevent server-side rendering errors and prevent unintended server side usage of client side code.
+
+```bash
+npm i client-only --force
+```
+
