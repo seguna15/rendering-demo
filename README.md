@@ -60,3 +60,10 @@ npm i server-only
 npm i client-only --force
 ```
 
+## Client component placement
+
+- server component can't handle state and interactivity, we need client components to full the fap
+
+- the key recommendation here is to position these client components lower in the component tree.
+
+
