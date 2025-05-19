@@ -43,3 +43,9 @@ npm i server-only
 
 - We can wrap our third party packages in client components
 - npm i react-slick slick-carousel @types/react-slick
+
+### Context Providers
+
+- these typically live near the root of an application to share global state and logic. E.g., theme
+
+- react context is not supported in server components, if you try it in the root you will get an error
